@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Known Chaos">
 <meta property="og:description" content="Retry or Fail?">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-11T11:01:32.253Z">
+<meta property="og:updated_time" content="2019-08-11T11:09:15.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder Beginner Contest 137 D 题解翻译">
 <meta name="twitter:description" content="Retry or Fail?">
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 18:52:53 / 修改时间：19:01:32" itemprop="dateCreated datePublished" datetime="2019-08-11T18:52:53+08:00">2019-08-11</time>
+              <time title="创建时间：2019-08-11 18:52:53 / 修改时间：19:09:15" itemprop="dateCreated datePublished" datetime="2019-08-11T18:52:53+08:00">2019-08-11</time>
             
 
             
@@ -527,7 +527,7 @@
 <li><p>2、将答案中可能存在的元素（在这个问题中即为所有的打工）按权重从大到小排序，假设排序完后为 $x_1, x_2, …, x_N$。</p>
 </li>
 <li><p>3、将 $y$ 以 $x_1, x_2, …, x_N$ 的顺序进行以下操作：</p>
-<p>\qquad (a) 如果在 $S$ 中加入 $y$ 后 $S$ 依然是 $I$ 中的元素（即 $S \cup {y} \in I$），就往 $S$ 中加入 $y$。</p>
+<p>&emsp; (a) 如果在 $S$ 中加入 $y$ 后 $S$ 依然是 $I$ 中的元素（即 $S \cup {y} \in I$），就往 $S$ 中加入 $y$。</p>
 </li>
 <li><p>4、得到最终的 $S$（$S$ 即为最优解）。【$S$ 最优性的证明：取任意一个 $I$ 中不同于 $S$ 的集合 $S_1$，若 $w(S_1) &gt; w(S)$，则必然有 $|S_1| &gt; |S|$ （否则与步骤 $3$ 矛盾）。由于 $|S_1| &gt; |S|$，根据拟阵公理 $3$，必然存在一个元素 $z$ 存在于 $S_1$ 但不存在于 $S$ 中，且使得 $S \cup {z} \in I$，则与步骤 $3$ 矛盾（显然如果存在这样的 $z$，步骤 $3$ 中它一定会被加入到 $S$ 中去）。因此这样的 $S_1$ 不存在，$S$ 即为最优解。】</p>
 </li>
