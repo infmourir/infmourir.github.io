@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Known Chaos">
 <meta property="og:description" content="Retry or Fail?">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-11T11:09:15.780Z">
+<meta property="og:updated_time" content="2019-08-11T11:39:57.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder Beginner Contest 137 D 题解翻译">
 <meta name="twitter:description" content="Retry or Fail?">
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 18:52:53 / 修改时间：19:09:15" itemprop="dateCreated datePublished" datetime="2019-08-11T18:52:53+08:00">2019-08-11</time>
+              <time title="创建时间：2019-08-11 18:52:53 / 修改时间：19:39:57" itemprop="dateCreated datePublished" datetime="2019-08-11T18:52:53+08:00">2019-08-11</time>
             
 
             
@@ -536,7 +536,7 @@
 <ol>
 <li><p>1、在上一个最优顺序分配的基础上，现在需要分配时间的工作需要等待 $x$ 天获得报酬。【这里原文解释得不够清楚】</p>
 </li>
-<li><p>2、如果可以的话，把这个工作分配到 $M$ 天后的 $x$ 天前。如果做不到（也就是说这天已经分配有其他的打工了）的话，尝试把这个打工分配到 $M$ 天后的 $x - 1$ 天前。依然做不到的话就分配到 $M$ 天后的 $x-2$ 天前。如此往复直到第一天，如果依然分配不了的话，分配就失败了。</p>
+<li><p>2、如果可以的话，把这个工作分配到 $M$ 天后的 $x$ 天前。如果做不到（也就是说这天已经分配有其他的打工了）的话，尝试把这个打工分配到 $M$ 天后的 $x + 1$ 天前。依然做不到的话就分配到 $M$ 天后的 $x+2$ 天前。如此往复直到第一天，如果依然分配不了的话，分配就失败了。</p>
 </li>
 </ol>
 <p>​现在要解决的问题是，快速求出并判断在上述步骤 $2$ 中，在 $M$ 天后的 $x$ 天前及之前，最迟的还未被分配的日子。这样，可以用支持求区间最大值和单点更新的线段树来维护当前 $S$ 中每个打工的分配日期，同时在 $O(logM)$ 的时间内判断 $y$ 的最晚插入位置，加上排序的总复杂度为 $O(NlogN + NlogM)$ ，可以解决这个问题。</p>
