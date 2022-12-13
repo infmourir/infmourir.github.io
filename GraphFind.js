@@ -487,6 +487,7 @@ function findPath()
     for(var i = 1; i <= Path_sum; i++)
     {
         console.log(Path[i]);
+        ans.innerHTML += "Pathway " + i + ":<br>"
         for(var j = 1; j < Path[i][0]; j++)
         {
             var nd = Calc[ Path[i][j] ][ Path[i][j + 1] ];
